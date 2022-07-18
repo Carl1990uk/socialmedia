@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { FirebaseTSAuth } from 'firebasets/firebasetsAuth/firebaseTSAuth';
 import { FirebaseTSApp } from 'firebasets/firebasetsApp/firebaseTSApp';
 import { AuthenticatorComponent } from './tools/authenticator/authenticator.component';
@@ -13,26 +14,27 @@ export class AppComponent {
   title = 'socialmedia';
   auth = new FirebaseTSAuth();
 
-  constructor(private loginSheet: MatBottomSheet){
+  constructor(private loginSheet: MatBottomSheet,
+    private router: Router){
     this.auth.listenToSignInStateChanges(
       user => {
         this.auth.checkSignInState(
           {
             whenSignedIn: user => {
-              alert();
+              
 
             },
             whenSignedOut: user => {
-              alert();
+             
             },
             whenSignedInAndEmailNotVerified: user => {
-              user.emailVerified
+              this.router.navigate(["emailVerification"])
             },
             whenSignedInAndEmailVerified: user => {
-              alert();
+             
             },
             whenChanged: user => {
-              alert();
+              
             }
           }
         )
