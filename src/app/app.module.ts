@@ -7,11 +7,16 @@ import { FirebaseTSApp} from 'firebasets/firebasetsApp/firebaseTSApp';
 import { environment } from 'src/environments/environment';
 import { HomeComponent } from './pages/home/home.component';
 import {MatButtonModule} from '@angular/material/button';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import {MatCardModule} from '@angular/material/card';
+import { AuthenticatorComponent } from './tools/authenticator/authenticator.component';
+
 
 @NgModule({
   declarations: [
     HomeComponent,
     AppComponent,
+    AuthenticatorComponent,
     
   ],
   imports: [
@@ -19,6 +24,8 @@ import {MatButtonModule} from '@angular/material/button';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatBottomSheetModule,
+    MatCardModule
     
   ],
   providers: [],
