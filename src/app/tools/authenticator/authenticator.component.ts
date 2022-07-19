@@ -68,7 +68,7 @@ export class AuthenticatorComponent implements OnInit {
       this.firebasetsAuth.createAccountWith(
         {
           email: email,
-          password: password,
+          password: password, //add user type here if needed!
           onComplete: (uc) => {
             this.MatBottomSheetRef.dismiss();
           },
