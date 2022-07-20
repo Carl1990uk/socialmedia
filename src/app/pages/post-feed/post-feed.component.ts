@@ -1,5 +1,5 @@
 import { CreatePostComponent } from './../../tools/create-post/create-post.component';
-import { MatDialogModule } from '@angular/material/dialog';
+
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 @Component({
