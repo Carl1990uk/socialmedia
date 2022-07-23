@@ -6,7 +6,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { PostFeedComponent } from './pages/post-feed/post-feed.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
+  {
+    path: '',
+    component: HomeComponent
+  },
   {path: 'emailVerification', component: EmailVerificationComponent},
   {path: 'postFeed', component: PostFeedComponent },
   {path: '**', component: HomeComponent},

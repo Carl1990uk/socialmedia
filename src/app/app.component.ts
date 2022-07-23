@@ -1,6 +1,5 @@
 import { Router } from '@angular/router';
 import { FirebaseTSAuth } from 'firebasets/firebasetsAuth/firebaseTSAuth';
-import { FirebaseTSApp } from 'firebasets/firebasetsApp/firebaseTSApp';
 import { AuthenticatorComponent } from './tools/authenticator/authenticator.component';
 import { Component } from '@angular/core';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
